@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/userDataFunction/definition/1.1.0/schema.json",
+  "runtime": "PYTHON",
+  "connectedDataSources": [
+    {
+      "alias": "lake1",
+      "artifactId": "c004814b-7471-4c12-aac8-6e710c1a4140",
+      "artifactType": "Lakehouse",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    }
+  ],
+  "functions": [
+    {
+      "name": "hello_fabric",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    }
+  ],
+  "libraries": {
+    "public": [
+      {
+        "name": "fabric-user-data-functions",
+        "type": "PYPI",
+        "version": "0.2.32rc0"
+      },
+      {
+        "name": "pypi",
+        "type": "PYPI",
+        "version": "2.1"
+      }
+    ],
+    "private": [
+      {
+        "name": "pandas-2.3.0-cp313-cp313t-musllinux_1_2_x86_64.whl",
+        "type": "WHEEL"
+      }
+    ]
+  }
+}

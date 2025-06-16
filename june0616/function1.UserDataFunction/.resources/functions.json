@@ -1,0 +1,30 @@
+{
+  "runtime": "PYTHON",
+  "functionsMetadata": [
+    {
+      "name": "hello_fabric",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "name": "req",
+          "direction": "In",
+          "type": "HttpTrigger"
+        }
+      ],
+      "fabricProperties": {
+        "fabricFunctionParameters": [
+          {
+            "dataType": "str",
+            "name": "name"
+          }
+        ],
+        "fabricFunctionReturnType": "str"
+      }
+    }
+  ]
+}
