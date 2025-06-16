@@ -41,9 +41,9 @@
           "type": "HttpTrigger"
         },
         {
-          "ItemType": null,
-          "SubType": "FabricLakehouseClient",
-          "Alias": "lake1",
+          "itemType": null,
+          "subType": "FabricLakehouseClient",
+          "alias": "lake1",
           "name": "myLakehouse",
           "direction": "In",
           "type": "FabricItem"

@@ -7,6 +7,12 @@
       "artifactId": "c004814b-7471-4c12-aac8-6e710c1a4140",
       "artifactType": "Lakehouse",
       "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    },
+    {
+      "alias": "warehouse11",
+      "artifactId": "e34545ff-fc59-4b39-84b0-c574e4b778ed",
+      "artifactType": "Warehouse",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
     }
   ],
   "functions": [
