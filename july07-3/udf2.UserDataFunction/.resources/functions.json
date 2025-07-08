@@ -1,0 +1,58 @@
+{
+  "runtime": "PYTHON",
+  "functionsMetadata": [
+    {
+      "name": "hello_fabric",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": [
+          {
+            "name": "name",
+            "dataType": "str"
+          }
+        ]
+      }
+    },
+    {
+      "name": "query_data_from_tables",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "myLakehouse",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "lake1",
+          "subType": "FabricLakehouseClient",
+          "itemType": null
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": []
+      }
+    }
+  ]
+}

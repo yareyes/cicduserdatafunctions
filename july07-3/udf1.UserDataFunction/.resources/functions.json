@@ -1,0 +1,162 @@
+{
+  "runtime": "PYTHON",
+  "functionsMetadata": [
+    {
+      "name": "return_list",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": [
+          {
+            "name": "data",
+            "dataType": "list"
+          }
+        ]
+      }
+    },
+    {
+      "name": "return_data",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": [
+          {
+            "name": "size",
+            "dataType": "int"
+          },
+          {
+            "name": "data",
+            "dataType": "list"
+          }
+        ]
+      }
+    },
+    {
+      "name": "transform_data",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "dict",
+        "fabricFunctionParameters": [
+          {
+            "name": "data",
+            "dataType": "list"
+          }
+        ]
+      }
+    },
+    {
+      "name": "sleep",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": [
+          {
+            "name": "data",
+            "dataType": "int"
+          }
+        ]
+      }
+    },
+    {
+      "name": "generate_json_array",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "dict",
+        "fabricFunctionParameters": [
+          {
+            "name": "nums",
+            "dataType": "int"
+          }
+        ]
+      }
+    },
+    {
+      "name": "query_data_from_tables",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "myLakehouse",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "lake1",
+          "subType": "FabricLakehouseClient",
+          "itemType": null
+        }
+      ],
+      "scriptFile": "function_app.py",
+      "fabricProperties": {
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": []
+      }
+    }
+  ]
+}
