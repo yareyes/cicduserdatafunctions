@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "UserDataFunction",
+    "displayName": "func-1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "626b8436-82ee-9bd8-4216-38a83f1cb666"
+  }
+}
