@@ -4,7 +4,7 @@
   "connectedDataSources": [
     {
       "alias": "lake1",
-      "artifactId": "c004814b-7471-4c12-aac8-6e710c1a4140",
+      "artifactId": "641d12fe-205a-4af2-a71c-1ad042abcc2f",
       "artifactType": "Lakehouse",
       "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
     }
