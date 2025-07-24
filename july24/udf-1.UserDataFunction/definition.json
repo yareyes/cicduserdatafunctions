@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/userDataFunction/definition/1.1.0/schema.json",
+  "runtime": "PYTHON",
+  "connectedDataSources": [
+    {
+      "alias": "lake722",
+      "artifactId": "641d12fe-205a-4af2-a71c-1ad042abcc2f",
+      "artifactType": "Lakehouse",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    },
+    {
+      "alias": "legacywh",
+      "artifactId": "542853ff-9c20-4ff9-bc17-c06a15fb7abd",
+      "artifactType": "DataWarehouse",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    }
+  ],
+  "functions": [
+    {
+      "name": "hello_fabric",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    }
+  ],
+  "libraries": {
+    "public": [
+      {
+        "name": "fabric-user-data-functions",
+        "type": "PYPI",
+        "version": "1.0.0"
+      }
+    ],
+    "private": [
+      {
+        "name": "numpy-2.3.1-cp311-cp311-manylinux_2_28_x86_64.whl",
+        "type": "WHEEL"
+      }
+    ]
+  }
+}
