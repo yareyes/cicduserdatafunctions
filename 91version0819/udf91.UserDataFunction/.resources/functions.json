@@ -1,0 +1,173 @@
+{
+  "Runtime": "PYTHON",
+  "FunctionsMetadata": [
+    {
+      "Name": "hello_fabric",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [
+          {
+            "dataType": "str",
+            "name": "name"
+          }
+        ],
+        "fabricFunctionReturnType": "str",
+        "fabricMetadataSchemaVersion": "1.1.0"
+      }
+    },
+    {
+      "Name": "read_from_sql_db",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricSqlConnection",
+          "Alias": "dmtsdb",
+          "AudienceType": null,
+          "Name": "sqlDB",
+          "Direction": "In",
+          "Type": "FabricItem"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [],
+        "fabricFunctionReturnType": "list",
+        "fabricMetadataSchemaVersion": "1.1.0"
+      }
+    },
+    {
+      "Name": "query_data_from_tables",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricLakehouseClient",
+          "Alias": "lake815",
+          "AudienceType": null,
+          "Name": "myLakehouse",
+          "Direction": "In",
+          "Type": "FabricItem"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [],
+        "fabricFunctionReturnType": "list",
+        "fabricMetadataSchemaVersion": "1.1.0"
+      }
+    },
+    {
+      "Name": "query_data_from_warehouse",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricSqlConnection",
+          "Alias": "wh1",
+          "AudienceType": null,
+          "Name": "myWarehouse",
+          "Direction": "In",
+          "Type": "FabricItem"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [],
+        "fabricFunctionReturnType": "list",
+        "fabricMetadataSchemaVersion": "1.1.0"
+      }
+    },
+    {
+      "Name": "get_function_invocation_details",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "Name": "udfContext",
+          "Direction": "In",
+          "Type": "UserDataFunctionContext"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [],
+        "fabricFunctionReturnType": "str",
+        "fabricMetadataSchemaVersion": "1.1.0"
+      }
+    },
+    {
+      "Name": "vectorize_string",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [
+          {
+            "dataType": "str",
+            "name": "text"
+          }
+        ],
+        "fabricFunctionReturnType": "str",
+        "fabricMetadataSchemaVersion": "1.1.0"
+      }
+    }
+  ]
+}

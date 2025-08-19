@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/userDataFunction/definition/1.1.0/schema.json",
+  "runtime": "PYTHON",
+  "connectedDataSources": [
+    {
+      "alias": "dmtsdb",
+      "artifactId": "525f7798-4fd6-4ab8-884d-707e42bb8f7b",
+      "artifactType": "SqlDbNative",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    },
+    {
+      "alias": "lake815",
+      "artifactId": "60479166-0189-416b-8887-b0bb0c4f421f",
+      "artifactType": "Lakehouse",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    },
+    {
+      "alias": "wh1",
+      "artifactId": "c9847e56-64d2-43e7-b1f4-501de0d55ac1",
+      "artifactType": "Warehouse",
+      "workspaceId": "5f09360f-9124-49bf-ba71-be0ccf90d089"
+    }
+  ],
+  "functions": [
+    {
+      "name": "get_function_invocation_details",
+      "description": "",
+      "isPublicEndpointEnabled": false
+    },
+    {
+      "name": "hello_fabric",
+      "description": "Test Function",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "query_data_from_tables",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "query_data_from_warehouse",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "read_from_sql_db",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "vectorize_string",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    }
+  ],
+  "libraries": {
+    "public": [
+      {
+        "name": "fabric-user-data-functions",
+        "type": "PYPI",
+        "version": "1.0"
+      },
+      {
+        "name": "numpy",
+        "type": "PYPI",
+        "version": "2.3.2"
+      },
+      {
+        "name": "pandas",
+        "type": "PYPI",
+        "version": "2.3.1"
+      }
+    ],
+    "private": [
+      {
+        "name": "scikit_learn-1.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "type": "WHEEL"
+      }
+    ]
+  }
+}
