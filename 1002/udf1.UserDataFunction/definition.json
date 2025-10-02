@@ -5,7 +5,7 @@
     {
       "alias": "dw3",
       "artifactId": "2af842a2-4d96-4e3b-8794-da248ba1aaa4",
-      "artifactType": "Warehouse",
+      "artifactType": "DataWarehouse",
       "workspaceId": "ae79a2d8-19de-4a8e-be13-996b8a8aabb7"
     },
     {
@@ -34,3 +34,4 @@
   }
 
 }
+
