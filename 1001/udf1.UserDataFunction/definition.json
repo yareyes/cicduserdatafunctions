@@ -7,7 +7,6 @@
       "artifactId": "test",
       "artifactType": "Lakehouse",
       "workspaceId": null
-    }
   ],
   "functions": [
     {
@@ -28,3 +27,4 @@
   }
 
 }
+
