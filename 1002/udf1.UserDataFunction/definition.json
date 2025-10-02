@@ -9,7 +9,7 @@
       "workspaceId": "ae79a2d8-19de-4a8e-be13-996b8a8aabb7"
     },
     {
-      "alias": "rlnlh",
+      "alias": "lh1",
       "artifactId": "202c70f9-d795-4831-87a0-3f246b1a9027",
       "artifactType": "Lakehouse",
       "workspaceId": "a377bc06-bdb0-40dd-b82e-9eb3b5b5e441"
@@ -32,4 +32,5 @@
     ],
     "private": []
   }
+
 }
