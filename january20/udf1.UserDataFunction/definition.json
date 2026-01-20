@@ -21,7 +21,7 @@
       "workspaceId": "c1f18524-382e-4aa1-8e36-26436c53ab8c"
     },
     {
-      "alias": "lh2",
+      "alias": "wh2",
       "artifactId": "651b8d52-551c-4164-8c5a-56de4b2e3ca4",
       "artifactType": "Warehouse",
       "workspaceId": "00000000-0000-0000-0000-000000000000"
@@ -86,3 +86,4 @@
   }
 
 }
+
