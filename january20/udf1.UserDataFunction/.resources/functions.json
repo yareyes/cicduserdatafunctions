@@ -1,0 +1,240 @@
+{
+  "runtime": "PYTHON",
+  "functionsMetadata": [
+    {
+      "name": "hello_fabric",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": [
+          {
+            "name": "name",
+            "dataType": "str",
+            "hasDefaultValue": false,
+            "defaultValue": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "query_data_from_tables",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "myLakehouse",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "lh1",
+          "subType": "FabricLakehouseClient",
+          "itemType": null,
+          "audienceType": null
+        },
+        {
+          "name": "myLakehouse2",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "lh2",
+          "subType": "FabricLakehouseClient",
+          "itemType": null,
+          "audienceType": null
+        },
+        {
+          "name": "keyvault",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "",
+          "subType": "FabricItem",
+          "itemType": null,
+          "audienceType": "KeyVault"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "find_max_conn_failures",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "myLakehouse",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "lh1",
+          "subType": "FabricLakehouseClient",
+          "itemType": null,
+          "audienceType": null
+        },
+        {
+          "name": "myLakehouse2",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "lh2",
+          "subType": "FabricLakehouseClient",
+          "itemType": null,
+          "audienceType": null
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "testing_business_events",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "beclient",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "be1",
+          "subType": "FabricBusinessEventsClient",
+          "itemType": null,
+          "audienceType": null
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "testing_business_events_object",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "beclient",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "be1",
+          "subType": "FabricBusinessEventsClient",
+          "itemType": null,
+          "audienceType": null
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "testing_business_events_client",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "beclient",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "be1",
+          "subType": "FabricBusinessEventsClient",
+          "itemType": null,
+          "audienceType": null
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "publish_business_events",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "beclient",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "be1",
+          "subType": "FabricBusinessEventsClient",
+          "itemType": null,
+          "audienceType": null
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    }
+  ]
+}
