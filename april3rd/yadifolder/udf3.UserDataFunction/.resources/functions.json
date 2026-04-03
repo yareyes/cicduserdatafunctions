@@ -1,0 +1,262 @@
+{
+  "runtime": "PYTHON",
+  "functionsMetadata": [
+    {
+      "name": "hello_fabric",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": [
+          {
+            "name": "name",
+            "dataType": "str",
+            "hasDefaultValue": false,
+            "defaultValue": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "testing_msi_token",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "query_data_from_tables",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "myLakehouse",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "LH1",
+          "subType": "FabricLakehouseClient",
+          "itemType": null,
+          "audienceType": null
+        },
+        {
+          "name": "cosmosDb",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "",
+          "subType": "FabricItem",
+          "itemType": null,
+          "audienceType": "KeyVault"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "two_generic",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "keyvault",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "",
+          "subType": "FabricItem",
+          "itemType": null,
+          "audienceType": "CosmosDB"
+        },
+        {
+          "name": "cosmosDb",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "",
+          "subType": "FabricItem",
+          "itemType": null,
+          "audienceType": "KeyVault"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "two_data_connection",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "myLakehouse",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "LH1",
+          "subType": "FabricLakehouseClient",
+          "itemType": null,
+          "audienceType": null
+        },
+        {
+          "name": "myLakehouse2",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "TestW",
+          "subType": "FabricSqlConnection",
+          "itemType": null,
+          "audienceType": null
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "event_grid",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "cosmosDb",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "",
+          "subType": "FabricItem",
+          "itemType": null,
+          "audienceType": "EventGrid"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "list",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "get_function_invocation_details",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "udfContext",
+          "type": "UserDataFunctionContext",
+          "direction": "In"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    },
+    {
+      "name": "get_function_invocation_details_keyvault",
+      "scriptFile": "function_app.py",
+      "bindings": [
+        {
+          "name": "req",
+          "type": "HttpTrigger",
+          "direction": "In",
+          "authLevel": "Anonymous",
+          "methods": [
+            "POST"
+          ],
+          "route": ""
+        },
+        {
+          "name": "udfContext",
+          "type": "UserDataFunctionContext",
+          "direction": "In"
+        },
+        {
+          "name": "cosmosDb",
+          "type": "FabricItem",
+          "direction": "In",
+          "alias": "",
+          "subType": "FabricItem",
+          "itemType": null,
+          "audienceType": "KeyVault"
+        }
+      ],
+      "fabricProperties": {
+        "fabricMetadataSchemaVersion": "1.1.0",
+        "fabricFunctionReturnType": "str",
+        "fabricFunctionParameters": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "eventTypes": [
+    {
+      "id": "eventone",
+      "description": "",
+      "format": "CloudEvents/1.0",
+      "envelopeMetadata": {
+        "id": {
+          "type": "string",
+          "required": true
+        },
+        "type": {
+          "type": "string",
+          "required": true,
+          "value": "eventone"
+        },
+        "source": {
+          "type": "string",
+          "required": true
+        },
+        "specversion": {
+          "type": "string",
+          "required": true
+        }
+      },
+      "schemaUrl": "#/schemas/eventone",
+      "schemaFormat": "Avro/1.12.0"
+    }
+  ],
+  "schemas": [
+    {
+      "id": "eventone",
+      "format": "Avro/1.12.0",
+      "versions": [
+        {
+          "id": "v1",
+          "format": "Avro/1.12.0",
+          "schema": "{\n \"fields\": [\n  {\n   \"name\": \"test\",\n   \"type\": \"string\"\n  }\n ],\n \"type\": \"record\",\n \"name\": \"eventone\"\n}",
+          "ancestor": "v1"
+        }
+      ]
+    }
+  ]
+}

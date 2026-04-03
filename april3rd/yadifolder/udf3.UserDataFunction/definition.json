@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/userDataFunction/definition/1.1.0/schema.json",
+  "runtime": "PYTHON",
+  "connectedDataSources": [
+    {
+      "alias": "LH1",
+      "artifactId": "1694318e-7b29-48e9-81ab-7541e7a22fde",
+      "artifactType": "Lakehouse",
+      "workspaceId": "0c7fb66b-2f68-4733-a237-442c3f61a334"
+    },
+    {
+      "alias": "TestW",
+      "artifactId": "d0dcf691-650a-464e-91d2-520f0c659b7f",
+      "artifactType": "Warehouse",
+      "workspaceId": "baeb06d3-9e3a-4573-bb7e-20791c7a27de"
+    }
+  ],
+  "functions": [
+    {
+      "name": "event_grid",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "get_function_invocation_details",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "get_function_invocation_details_keyvault",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "hello_fabric",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "query_data_from_tables",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "testing_msi_token",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "two_data_connection",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    },
+    {
+      "name": "two_generic",
+      "description": "",
+      "isPublicEndpointEnabled": true
+    }
+  ],
+  "libraries": {
+    "public": [
+      {
+        "name": "azure-core",
+        "type": "PYPI",
+        "version": "1.39.0"
+      },
+      {
+        "name": "azure-cosmos",
+        "type": "PYPI",
+        "version": "4.15.0"
+      },
+      {
+        "name": "azure-eventgrid",
+        "type": "PYPI",
+        "version": "4.22.0"
+      },
+      {
+        "name": "azure-identity",
+        "type": "PYPI",
+        "version": "1.25.3"
+      },
+      {
+        "name": "azure-keyvault-secrets",
+        "type": "PYPI",
+        "version": "4.10.0"
+      },
+      {
+        "name": "fabric-user-data-functions",
+        "type": "PYPI",
+        "version": "1.0rc"
+      }
+    ],
+    "private": [
+      {
+        "name": "fabric_user_data_functions-0.0.2-py3-none-any.whl",
+        "type": "WHEEL"
+      }
+    ]
+  }
+}
